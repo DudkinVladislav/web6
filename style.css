@@ -1,0 +1,142 @@
+body { margin:0;
+	display:flex;
+	flex-direction:column;
+text-align:center;}
+header{background-color:#ff9911;}
+.header_first {
+    width: 100%;
+    height: 130px;
+    padding: 0 0 0 0;
+    max-width: 300px;
+    margin: 0 auto 0 auto;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    background: url(logo.jpg);
+    float: left;
+}
+#name {
+    padding: 0 0 0 0;
+    float: left;
+}
+#name h1 {
+    height: 100%;
+    line-height: 60px;
+    margin-top: 20px;
+}
+.real_header {
+    font-family: 'Arial', sans-serif;
+    color: Red;
+    font-size: 250%;
+}
+	
+
+nav {letter-spacing:normal;
+    display:flex;
+    flex-direction:column;
+    margin: 0 auto;
+    text-align: center;
+	width:100%;
+}
+#navbar {letter-spacing:normal;
+  margin: 10px 10px 0 10px;       
+    display: flex;
+    flex-direction:column;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    padding:4px;
+}
+#navbar li { margin: 5px 0 0 0;letter-spacing:normal; }
+#border {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}  
+#zag {text-align:center;}
+ .test{
+width: 100%;
+text-align:  center;
+}
+.center{
+display: inline-block}
+li{
+text-align: left;
+}
+table {
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    border-spacing: 4px;
+    border: 5px;
+}
+	.gamePin{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr:nth-child(odd) {
+    background: red;
+    padding: 4px;
+}
+tr:nth-child(even) {
+    background: green;
+    padding: 4px;
+}
+#task {display:flex;
+	flex-direction:column;
+	text-align:center;}
+#task tablu{order:2;}
+#task forma{order:1;}
+footer {
+    margin-top: 50px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#calcur{text-align:center;
+	background-color:yellow;
+}
+footer{background-color:#ff9911;}
+
+@media screen and (min-width: 1024px) 
+{
+	body
+	{
+	margin: 0;
+	text-align:center;
+	}
+   #navbar 
+	{
+  margin:10px 0 0 0;
+  padding: 4px;
+  list-style-type: none;
+	display:flex;
+    flex-direction:row;
+	   text-align: center;
+	}
+	#navbar li{display: inline;}
+    table
+	{
+        font-size: 20px;
+    	}
+	#task 	{
+		display:flex;
+		flex-direction:column;
+		}
+#task tablu{order:1;}
+#task forma{order:2;}
+
+}
