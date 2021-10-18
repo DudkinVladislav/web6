@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded',function(event) {
 	if(chek.test(num1[0].value==false))
 	   {document.getElementById('out').innerHTML='Введённые данные неверны.';}
     let num3 = document.getElementById("out");
-    let sel = document.getElementByName("myselect");
+    let sel = document.getElementById("myselect");
     sel[0].addEventListener("change",function(event){
 	    let select = event.target;
 	    let radios = document.getElementById("radios");
