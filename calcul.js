@@ -14,8 +14,8 @@ function proizvedenie() {
 	return false;   
     }
 }
-var rez1[3]={2000,3000,3000};
-var rez2[3]={0,1000,500};
+var rez1=[2000,3000,3000];
+var rez2=[0,1000,500];
 var rez3=500;
 let rezult=0;
 window.addEventListener('DOMContentLoaded',function(event) {
