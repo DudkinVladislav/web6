@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Задание 5</title>
+    <title>Задание 6</title>
     <link rel="stylesheet" href="style.css"/>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -20,7 +20,7 @@
 		<div class="header_first">
 			<div id="logo"></div>
 			<div id="name">
-	   			<h1 class="real_header">Задание 5</h1>
+	   			<h1 class="real_header">Задание 6</h1>
 			</div>
 		</div>
 		</div>
@@ -231,10 +231,21 @@
 	<div id="calcur">
 	<h1 id="calculator">Калькулятор</h1>
 	<form>
-	Цена:<input name="number1" type="text">
-	Количество:<input name="number2" type="text">
-	<button id="my-button" onclick="return proizvedenie();">Результат
-	</button>
+	Группы:
+	<select name="myselect">
+    	    <option value="1">Кино</option>
+    	    <option value="2">Агата Кристи</option>
+            <option value="3">Король и шут</option>
+  	</select>
+	Количество билетов:<input name="number1" type="text">
+	<div class="radios" id="radios" style="display: block;">
+    	    <label><input type="radio" name="myradio" value="r1">Балкон</label>
+      	    <label><input type="radio" name="myradio" value="r2">Танцпол</label>
+    	    <label><input type="radio" name="myradio" value="r3">Партер</label>
+  	</div>
+	<div class="checkbox">
+		<label><input type="checkbox" checked="checked" name="check-1">Афиша с автографом</label>
+	</div>
 	</form>
 	<p>Ваша стоимость:</p>
 	<p id="out"></p>
