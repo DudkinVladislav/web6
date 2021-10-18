@@ -32,12 +32,12 @@ window.addEventListener('DOMContentLoaded',function(event) {
 	    let checkbox = document.getElementByClassName("checkbox"); 
 	    console.log(select.value);
 	    if(select.value=="1"){let rezult=rezult+rez1[0];
-				  let num3.innerHTML = Math.abs(result);
+				  num3.innerHTML = Math.abs(result);
 				 }
 	    if(select.value=="2"){
 		    radios.style.display="block";
 		   let rezult=rezult+rez1[1];
-		   let num3.innerHTML = Math.abs(result);
+		   num3.innerHTML = Math.abs(result);
 	    }
 	    else{
 		    radios.style.display="none";
@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded',function(event) {
 	    if(select.value=="3"){
 		    checkbox.style.display="block";
 		    let rezult=rezult+rez1[2];
-		    let num3.innerHTML = Math.abs(result); 
+		    num3.innerHTML = Math.abs(result); 
 	    }
 	    else{
 		    checkbox.style.display="none";
@@ -62,15 +62,15 @@ window.addEventListener('DOMContentLoaded',function(event) {
       console.log(r.value);
 	    if (r.value=="r1"){
 		    let rezult=rez1[1]+rez2[0];
-		    let num3.innerHTML = Math.abs(result);
+		    num3.innerHTML = Math.abs(result);
 			      }
 	    if (r.value=="r2"){
 		    let rezult=rez1[1]+rez2[1];
-		    let num3.innerHTML = Math.abs(result);
+		    num3.innerHTML = Math.abs(result);
 			      }
 	    if (r.value=="r3"){
 		    let rezult=rez1[1]+rez2[2];
-		    let num3.innerHTML = Math.abs(result);
+		    num3.innerHTML = Math.abs(result);
 			      }
 
     });
