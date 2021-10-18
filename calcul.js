@@ -31,12 +31,12 @@ window.addEventListener('DOMContentLoaded',function(event) {
 	    let radios = document.getElementById("radios");
 	    let checkbox = document.getElementByClassName("checkbox"); 
 	    console.log(select.value);
-	    if(select.value=="1"){let rezult+=rez1[0];
+	    if(select.value=="1"){let rezult=rezult+rez1[0];
 				  let num3.innerHTML = Math.abs(result);
 				 }
 	    if(select.value=="2"){
 		    radios.style.display="block";
-		   let rezult+=rez1[1];
+		   let rezult=rezult+rez1[1];
 		   let num3.innerHTML = Math.abs(result);
 	    }
 	    else{
@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded',function(event) {
 	    }
 	    if(select.value=="3"){
 		    checkbox.style.display="block";
-		    let rezult+=rez1[2];
+		    let rezult=rezult+rez1[2];
 		    let num3.innerHTML = Math.abs(result); 
 	    }
 	    else{
