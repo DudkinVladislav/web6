@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded',function(event) {
     console.log("DOM finaly loaded and parsed");
     const chek =/^\d+$/
     let num1 = document.getElementsByName("number1");
-	if(chek.test(num1[0].value==false)
+	if(chek.test(num1[0].value==false))
 	   {document.getElementById('out').innerHTML='Введённые данные неверны.';}
     let num3 = document.getElementById("out");
     let sel = document.getElementByName("myselect");
