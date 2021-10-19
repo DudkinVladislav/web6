@@ -48,7 +48,7 @@ function newprice()
 				cena += radioCena;
 			}
 		}
-	}
+	});
 		k[0]=Number.parseInt(k[0]);
 		var rec1=cena*k[0].value;
 		Cenabill.innnerHTML = Math.abs(rec1);
@@ -78,7 +78,7 @@ function newprice()
 				cena += radioCena;
 			}
 		}
-	}
+	});
 		k[0]=Number.parseInt(k[0]);
 		var rec1=cena*k[0].value;
 		Cenabill.innnerHTML = Math.abs(rec1);
