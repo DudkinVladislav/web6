@@ -25,7 +25,7 @@ function newprice()
 	}
 	else
 		radiot.style.display = "none";
-	let radios = document.getElementByName("myradio");
+	let radios = document.getElementsByName("myradio");
 	radios.forEach(function(radio){
 		if (radio.checked){
 			let radioCena = ceni.mesta[radio.value];
@@ -84,7 +84,7 @@ window.addEventListener('DOMContentLoaded',function(event) {
 		let p =event.target;
 		newprice();
 	});
-    let radios = document.getElementByName("myradio");
+    let radios = document.getElementsByName("myradio");
 	radios.forEach(function(radio){
 		radio.addEventListener("change",function(event){
 			let r = event.target;
