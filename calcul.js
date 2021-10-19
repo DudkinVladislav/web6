@@ -62,27 +62,12 @@ function newprice()
           let afishCena = ceni.afish;
           cena += afishCena;
       }
-		}
+		});
 		k[0]=Number.parseInt(k[0]);
 		var rec2=cena*k[0].value;
 		Cenabill.innnerHTML = Math.abs(rec2);	   
 	}
-		let radios = document.getElementsByName("myradio");
-	radios.forEach(function(radio)
-	{
-		if (radio.checked)
-		{
-			let radioCena = ceni.mesta[radio.value];
-			if (radioCena !== undefined)
-			{
-				cena += radioCena;
-			}
-		}
-	});
-		k[0]=Number.parseInt(k[0]);
-		var rec1=cena*k[0].value;
-		Cenabill.innnerHTML = Math.abs(rec1);
-	}
+		
 	
 		
 	const chek =/^\d+$/;
