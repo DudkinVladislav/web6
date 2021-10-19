@@ -29,7 +29,7 @@ function newprice()
 	radios.forEach(function(radio){
 		if (radio.checked){
 			let radioCena = ceni.mesta[radio.value];
-			if (radioCena !== underfined){
+			if (radioCena !== undefined){
 				price += radioCena;
 			}
 		}
