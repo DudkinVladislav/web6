@@ -30,7 +30,7 @@ function newprice()
 			}
 		}
 	});
-	let checkboxes = document.querySelectorAll("#checkboxes input");
+	let checkboxes = document.getElementsByName("afish");
 	checkboxes.forEach(function(checkbox){
 		if (checkbox.checked){
 			let afishCena =ceni.afish;
@@ -97,7 +97,7 @@ window.addEventListener('DOMContentLoaded',function(event) {
 		});
 	});
 	
-    let checkboxes = document.querySelectorAll("#checkboxes input");
+    let checkboxes = document.getElementsByName("afish");
     checkboxes.forEach(function(checkbox) {
       checkbox.addEventListener("change", function(event) {
           let g = event.target;
