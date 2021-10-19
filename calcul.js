@@ -85,7 +85,7 @@ window.addEventListener('DOMContentLoaded',function(event) {
     
 	select1.addEventListener("change",function(event){
 	    let select = event.target;
-	    newprise();
+	    newprice();
 	});
 	 let kolvo = document.getElementsByName("number1");
 	let kol= kolvo[0];
@@ -97,7 +97,7 @@ window.addEventListener('DOMContentLoaded',function(event) {
 	radios.forEach(function(radio){
 		radio.addEventListener("change",function(event){
 			let r = event.target;
-			newprise();
+			newprice();
 		});
 	});
 	
