@@ -20,7 +20,7 @@ function newprice()
 	
 	let radiot=document.getElementById("radios");
 	console.log(s.value);
-	if(s.value == "2"){
+	if(s.value == "1"){
 		radiot.style.display ="block";
 	}
 	else
@@ -43,7 +43,7 @@ function newprice()
 	});
 	let checkf =document.getElementById("checkbox");
 	console.log(s.value);
-	if (s.value == "3"){
+	if (s.value == "2"){
 		checkf.style.display = "block";
 	}
 	else
@@ -51,7 +51,7 @@ function newprice()
 	let Cenabill = document.getElementById("out");
 	let k = document.getElementsByName("number1");
 	console.log(s.value);
-	if (s.value =="1"){
+	if (s.value =="0"){
 		console.log(s.value);
 		cena=ceni.Grupp[0];
 		k[0] = Number.parseInt(k[0]);
