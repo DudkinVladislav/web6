@@ -6,7 +6,7 @@ function getCen(){
 			mesto2:1500,
 			mesto3:1000,
 		},
-		afish:{500}
+		afish:500
 	};
 }
 		
