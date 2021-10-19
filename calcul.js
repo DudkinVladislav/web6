@@ -1,82 +1,104 @@
-function proizvedenie() {
-    const chek =/^\d+$/
-    let num1 = document.getElementsByName("number1");	
-    if (chek.test(num1[0].value) == false|| chek.test(num2[0].value) == false) {
-        document.getElementById('out').innerHTML='Введённые данные неверны.';
-	return false;
-    }
-    else{
-        let num3 = document.getElementById("out");
-        num1[0] = Number.parseInt(num1[0]);
-        num2[0] = Number.parseInt(num2[0]);
-	var result = num1[0].value * num2[0].value;
-        num3.innerHTML = Math.abs(result);
-	return false;   
-    }
+function getCen(){
+	return{
+		Grupp:[3000,4000,5000],
+		mesta:{
+			mesto1:500,
+			mesto2:1500,
+			mesto3:1000,
+		},
+		afish:{500}
+	};
 }
-var rez1=[2000,3000,3000];
-var rez2=[0,1000,500];
-var rez3=500;
-let rezult=0;
+		
+function newprice()
+{
+	let s=document.getElementById("myselect");
+	let select =s[0];
+	let cena=0;
+	let ceni=getCen();
+	let CenaNumber =parseInt(select.value);
+	cena=ceni.Grupp[CenaNumber];
+	
+	let radiot=document.getElementById("radios");
+	if(select.value == "1"){
+		radiot.style.display ="block";
+	}
+	else
+		radiot.style.display = "none";
+	let radios = document.getElementByName("myradio");
+	radios.forEach(function(radio){
+		if (radio.checked){
+			let radioCena = ceni.mesta[radio.value];
+			if (radioCena !== underfined){
+				price += radioCena;
+			}
+		}
+	});
+	let checkboxes = document.querySelectorAll("#checkboxes input");
+	checkboxes.forEach(function(checkbox){
+		if (checkbox.checked){
+			let afishCena =Ceni.afish[0];
+			cena += afishCena;
+		}
+	});
+	let checkf =document.getElementById("checkbox");
+	if (select.value == "2"){
+		checkf.style.display = "block";
+	}
+	else
+		checkf.style.display = "none";
+	let Cenabill = document.getElementById("out");
+	let k = document.getElementsByName("number1");
+	const chek =/^\d+$/;
+	const pr= /[0-9/.]+/;
+	let first = Cenabill.match(pr);
+	if (chek.test(first)==false || chek.test(k.value)==false){
+		Cenabill.innerHTML='Введённые данные неверны';
+	}
+	else
+	{
+		first[0] = Number.parseInt(first[0]);
+		k[0] = Number.parseInt(k[0]);
+		var res=first*k[0].value;
+		Cenabill.innerHTML = Math.abs(res);
+		return false;
+	}
+}
+
 window.addEventListener('DOMContentLoaded',function(event) {
     console.log("DOM finaly loaded and parsed");
-    const chek =/^\d+$/
-    let num1 = document.getElementsByName("number1");
-	if(chek.test(num1[0].value==false))
-	   {document.getElementById('out').innerHTML='Введённые данные неверны.';}
-    let num3 = document.getElementById("out");
+    const chek =/^\d+$/;
+    let radiof = document.getElementById("radios");
+	radiof.style.display="none";
+	
     let sel = document.getElementById("myselect");
-    sel[0].addEventListener("change",function(event){
+
+    let select1=sel[0];
+	select1.addEventListener("change",function(event){
 	    let select = event.target;
-	    let radios = document.getElementById("radios");
-	    let checkbox = document.getElementByClassName("checkbox"); 
-	    console.log(select.value);
-	    if(select.value=="1"){let rezult=rezult+rez1[0];
-				  num3.innerHTML = Math.abs(rezult);
-				 }
-	    if(select.value=="2"){
-		    radios.style.display="block";
-		   let rezult=rezult+rez1[1];
-		   num3.innerHTML = Math.abs(rezult);
-	    }
-	    else{
-		    radios.style.display="none";
-	    }
-	    if(select.value=="3"){
-		    checkbox.style.display="block";
-		    let rezult=rezult+rez1[2];
-		    num3.innerHTML = Math.abs(rezult); 
-	    }
-	    else{
-		    checkbox.style.display="none";
-	    }
+	    newprise();
+	});
+	 let kolvo = document.getElementsByName("number1");
+	kolvo.addEventListener("input",function(event){
+		let target =event.target;
+		newprice();
+	});
+    let radios = document.getElementByName("myradio");
+	radios.forEach(function(radio){
+		radio.addEventListener("change",function(event){
+			let r = event.target;
+			newprise();
+		});
+	});
+	
+    let checkboxes = document.querySelectorAll("#checkboxes input");
+    checkboxes.forEach(function(checkbox) {
+      checkbox.addEventListener("change", function(event) {
+          let g = event.target;
+          newprice();
+      });
     });
-	let r = document.querySelectorAll(".radios input[type=radio]");
-
-  r.forEach(function(radio) {
-
-    radio.addEventListener("change", function(event) {
-
-      let r = event.target;
-
-      console.log(r.value);
-	    if (r.value=="r1"){
-		    let rezult=rez1[1]+rez2[0];
-		    num3.innerHTML = Math.abs(rezult);
-			      }
-	    if (r.value=="r2"){
-		    let rezult=rez1[1]+rez2[1];
-		    num3.innerHTML = Math.abs(rezult);
-			      }
-	    if (r.value=="r3"){
-		    let rezult=rez1[1]+rez2[2];
-		    num3.innerHTML = Math.abs(rezult);
-			      }
-
-    });
-    
-  });
-    
-	    
-    
-})
+   
+	newprice();
+});
+	   
