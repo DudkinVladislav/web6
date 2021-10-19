@@ -20,7 +20,7 @@ function newprice()
 	cena=ceni.Grupp[CenaNumber];
 	
 	let radiot=document.getElementById("radios");
-	if(select.value == "1"){
+	if(select.value == "2"){
 		radiot.style.display ="block";
 	}
 	else
@@ -37,20 +37,27 @@ function newprice()
 	let checkboxes = document.querySelectorAll("#checkboxes input");
 	checkboxes.forEach(function(checkbox){
 		if (checkbox.checked){
-			let afishCena =Ceni.afish[0];
+			let afishCena =ceni.afish;
 			cena += afishCena;
 		}
 	});
 	let checkf =document.getElementById("checkbox");
-	if (select.value == "2"){
+	if (select.value == "3"){
 		checkf.style.display = "block";
 	}
 	else
 		checkf.style.display = "none";
 	let Cenabill = document.getElementById("out");
 	let k = document.getElementsByName("number1");
+	if (select.value =="1"){
+		cena=ceni.Grupp[0];
+		k[0] = Number.parseInt(k[0]);
+		var rec=cena*k[0].value;
+		Cenabill.innerHTML = Math.abs(rec);
+	}
 	const chek =/^\d+$/;
 	const pr= /[0-9/.]+/;
+	
 	if  (chek.test(k.value)==false){
 		Cenabill.innerHTML='Введённые данные неверны';
 	}
