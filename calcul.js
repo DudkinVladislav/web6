@@ -13,15 +13,14 @@ function getCen(){
 function newprice()
 {
 	let s=document.getElementById("myselect");
-	let select =s[0];
 	let cena=0;
 	let ceni=getCen();
-	let CenaNumber =parseInt(select.value);
+	let CenaNumber =parseInt(s.value);
 	cena=ceni.Grupp[CenaNumber];
 	
 	let radiot=document.getElementById("radios");
-	console.log(select.value);
-	if(select.value == "2"){
+	console.log(s.value);
+	if(s.value == "2"){
 		radiot.style.display ="block";
 	}
 	else
@@ -43,17 +42,17 @@ function newprice()
 		}
 	});
 	let checkf =document.getElementById("checkbox");
-	console.log(select.value);
-	if (select.value == "3"){
+	console.log(s.value);
+	if (s.value == "3"){
 		checkf.style.display = "block";
 	}
 	else
 		checkf.style.display = "none";
 	let Cenabill = document.getElementById("out");
 	let k = document.getElementsByName("number1");
-	console.log(select.value);
-	if (select.value =="1"){
-		console.log(select.value);
+	console.log(s.value);
+	if (s.value =="1"){
+		console.log(s.value);
 		cena=ceni.Grupp[0];
 		k[0] = Number.parseInt(k[0]);
 		var rec=cena*k[0].value;
@@ -63,7 +62,7 @@ function newprice()
 	const pr= /[0-9/.]+/;
 	
 	if  (chek.test(k.value)==false){
-		console.log(select.value);
+		console.log(s.value);
 		Cenabill.innerHTML='Введённые данные неверны';
 	}
 	else
@@ -81,9 +80,9 @@ window.addEventListener('DOMContentLoaded',function(event) {
     let radiof = document.getElementById("radios");
 	radiof.style.display="none";
 	
-    let sel = document.getElementById("myselect");
+    let select1 = document.getElementById("myselect");
 
-    let select1=sel[0];
+    
 	select1.addEventListener("change",function(event){
 	    let select = event.target;
 	    newprise();
@@ -91,7 +90,7 @@ window.addEventListener('DOMContentLoaded',function(event) {
 	 let kolvo = document.getElementsByName("number1");
 	let kol= kolvo[0];
 	kol.addEventListener("input",function(event){
-		let p =event.target;
+		let p = event.target;
 		newprice();
 	});
     let radios = document.getElementsByName("myradio");
