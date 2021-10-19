@@ -30,7 +30,7 @@ function newprice()
 		if (radio.checked){
 			let radioCena = ceni.mesta[radio.value];
 			if (radioCena !== undefined){
-				price += radioCena;
+				cena += radioCena;
 			}
 		}
 	});
@@ -51,15 +51,13 @@ function newprice()
 	let k = document.getElementsByName("number1");
 	const chek =/^\d+$/;
 	const pr= /[0-9/.]+/;
-	let first = Cenabill.match(pr);
-	if (chek.test(first)==false || chek.test(k.value)==false){
+	if  (chek.test(k.value)==false){
 		Cenabill.innerHTML='Введённые данные неверны';
 	}
 	else
 	{
-		first[0] = Number.parseInt(first[0]);
 		k[0] = Number.parseInt(k[0]);
-		var res=first*k[0].value;
+		var res=cena*k[0].value;
 		Cenabill.innerHTML = Math.abs(res);
 		return false;
 	}
