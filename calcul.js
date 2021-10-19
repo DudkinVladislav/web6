@@ -61,13 +61,13 @@ function newprice()
 	const chek =/^\d+$/;
 	const pr= /[0-9/.]+/;
 	
-	if  (chek.test(k.value)==false){
+	if  (chek.test(Number.parseInt(k[0].value))==false){
 		console.log(s.value);
 		Cenabill.innerHTML='Введённые данные неверны';
 	}
 	else
 	{
-		k[0] = Number.parseInt(k[0]);
+		k[0] = Number.parseInt(k[0].value);
 		var res=cena*k[0].value;
 		Cenabill.innerHTML = Math.abs(res);
 		return false;
