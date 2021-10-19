@@ -79,8 +79,9 @@ window.addEventListener('DOMContentLoaded',function(event) {
 	    newprise();
 	});
 	 let kolvo = document.getElementsByName("number1");
-	kolvo.addEventListener("input",function(event){
-		let target =event.target;
+	let kol= kolvo[0];
+	kol.addEventListener("input",function(event){
+		let p =event.target;
 		newprice();
 	});
     let radios = document.getElementByName("myradio");
