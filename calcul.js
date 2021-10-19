@@ -11,34 +11,14 @@ function newprice()
 	let s=document.getElementById("myselect");
 	let cena=0;
 	let ceni=getCen();
-	let CenaNumber =parseInt(s.value);
-	cena=ceni.Grupp[CenaNumber];
-	
 	let radiot=document.getElementById("radios");
-	console.log(s.value);
 	if(s.value == "1"){
 		radiot.style.display ="block";
 	}
-	else
+	else{
 		radiot.style.display = "none";
-	let radios = document.getElementsByName("myradio");
-	radios.forEach(function(radio){
-		if (radio.checked){
-			let radioCena = ceni.mesta[radio.value];
-			if (radioCena !== undefined){
-				cena += radioCena;
-			}
-		}
-	});
-	let checkboxes = document.getElementsByName("afish");
-	checkboxes.forEach(function(checkbox){
-		if (checkbox.checked){
-			let afishCena =ceni.afish;
-			cena += afishCena;
-		}
-	});
+	}
 	let checkf =document.getElementById("checkbox");
-	console.log(s.value);
 	if (s.value == "2"){
 		checkf.style.display = "block";
 	}
@@ -46,28 +26,72 @@ function newprice()
 		checkf.style.display = "none";
 	let Cenabill = document.getElementById("out");
 	let k = document.getElementsByName("number1");
-	console.log(s.value);
+	
 	if (s.value =="0"){
-		console.log(s.value);
-		cena=ceni.Grupp[0];
+		cena=ceni.Grupp[Number.parseInt(s.value)];
 		k[0] = Number.parseInt(k[0]);
 		var rec=cena*k[0].value;
 		Cenabill.innerHTML = Math.abs(rec);
 	}
+	
+	if (s.value=="1")
+	{
+		cena=ceni.Grupp[Number.parseInt(s.value)];
+		let radios = document.getElementsByName("myradio");
+	radios.forEach(function(radio)
+	{
+		if (radio.checked)
+		{
+			let radioCena = ceni.mesta[radio.value];
+			if (radioCena !== undefined)
+			{
+				cena += radioCena;
+			}
+		}
+	}
+		k[0]=Number.parseInt(k[0]);
+		var rec1=cena*k[0].value;
+		Cenabill.innnerHTML = Math.abs(rec1);
+	}
+	if (s.value=="2")
+	{
+		cena=ceni.Grupp[Number.parseInt(s.value)];
+		let checkboxes = document.getElementsByName("afish");
+		checkboxes.forEach(function(checkbox) {
+      if (checkbox.checked) {
+          let afishCena = ceni.afish;
+          cena += afishCena;
+      }
+		}
+		k[0]=Number.parseInt(k[0]);
+		var rec2=cena*k[0].value;
+		Cenabill.innnerHTML = Math.abs(rec2);	   
+	}
+		let radios = document.getElementsByName("myradio");
+	radios.forEach(function(radio)
+	{
+		if (radio.checked)
+		{
+			let radioCena = ceni.mesta[radio.value];
+			if (radioCena !== undefined)
+			{
+				cena += radioCena;
+			}
+		}
+	}
+		k[0]=Number.parseInt(k[0]);
+		var rec1=cena*k[0].value;
+		Cenabill.innnerHTML = Math.abs(rec1);
+	}
+	
+		
 	const chek =/^\d+$/;
 	const pr= /[0-9/.]+/;
 	
 	if  (chek.test(Number.parseInt(k[0].value))==false){
-		console.log(s.value);
 		Cenabill.innerHTML='Введённые данные неверны';
 	}
-	else
-	{
-		k[0] = Number.parseInt(k[0].value);
-		var res=cena*k[0].value;
-		Cenabill.innerHTML = Math.abs(res);
-		return false;
-	}
+	
 }
 
 window.addEventListener('DOMContentLoaded',function(event) {
