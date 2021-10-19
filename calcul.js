@@ -1,11 +1,7 @@
 function getCen(){
 	return{
 		Grupp:[3000,4000,5000],
-		mesta:{
-			mesto1:500,
-			mesto2:1500,
-			mesto3:1000,
-		},
+		mesta:[500,1500,1000],
 		afish:500
 	};
 }
